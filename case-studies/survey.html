@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Survey | Carl Potter Portfolio</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
+
+<!-- Progress bar -->
+<div class="progress-bar"></div>
+
+<!-- NAV -->
+<nav class="navbar">
   <div class="nav-content">
     <div class="nav-brand">
       <img src="/portfolio/images/CP_main_colourless.png" alt="Carl Potter logo">
@@ -15,40 +23,70 @@
 
     <div class="nav-links">
       <a href="/portfolio/index.html">Home</a>
-      <a href="#cases">Case Studies</a>
+      <a href="/portfolio/about.html">About</a>
+      <a href="/portfolio/index.html#case-studies">Case Studies</a>  
+      <a href="/portfolio/skills.html">Skills</a>
       <a href="/portfolio/index.html#contact">Contact</a>
     </div>
   </div>
 </nav>
-  <header class="site-header">
-    <img src="../images/CP_main_colourless.png" alt="Carl Potter logo" class="logo">
-    <div class="header-text">
-      <h1>Carl Potter</h1>
-      <p>UX & Customer Experience Specialist</p>
-    </div>
-  </header>
 
-  <main>
-    <section>
-      <h2>Survey</h2>
-      <p>This case study explores survey design, execution, and analysis to extract actionable user insights.</p>
+<!-- HERO -->
+<header class="site-header">
+  <div class="header-text">
+    <h1>Survey</h1>
+    <p class="role">UX & Customer Experience Specialist</p>
+    <p class="tagline">Designed and analysed a multi-market survey that increased actionable insights by 50%, driving data-led improvements to support journeys.</p>
+  </div>
+</header>
 
-      <h3>Objectives</h3>
-      <p>Explain what the survey aimed to learn and why it was critical to the project.</p>
+<main>
+  <!-- Challenge -->
+  <section>
+    <h2>Challenge</h2>
+    <p>User feedback was inconsistent across markets, limiting the team’s ability to make data-driven decisions. Existing surveys were poorly targeted and generated few actionable insights.</p>
+  </section>
 
-      <h3>Design & Methodology</h3>
-      <p>Detail how you structured questions, sample size, distribution methods, and tools used.</p>
+  <!-- Approach -->
+  <section>
+    <h2>Approach</h2>
+    <p>I designed a multi-market survey with clear goals, targeted questions, and structured data collection. I coordinated across regions, ensured high response rates, and analysed the data to identify patterns and opportunities for improvement.</p>
+  </section>
 
-      <h3>Findings</h3>
-      <p>Summarize key insights, patterns, and any surprising results.</p>
+  <!-- Impact -->
+  <section>
+    <h2>Impact</h2>
+    <p>The survey increased actionable insights by 50%, enabling teams to optimise support journeys and improve customer satisfaction. Decisions became evidence-based, and regional teams could prioritise interventions effectively.</p>
+  </section>
+</main>
 
-      <h3>Impact</h3>
-      <p>Explain how the survey influenced the project decisions or outcomes.</p>
-    </section>
-  </main>
+<!-- FOOTER -->
+<footer id="contact">
+  <h2>Contact</h2>
+  <p>Get in touch</p>
+  <div class="contact-buttons">
+    <a href="mailto:cpotter514@gmail.com" class="button">Email Me</a>
+    <a href="https://linkedin.com/in/carl-potter-/" target="_blank" class="button">LinkedIn</a>
+  </div>
+</footer>
 
-  <footer>
-    &copy; 2026 Carl Potter. All rights reserved.
-  </footer>
+<!-- JS -->
+<script>
+const nav = document.querySelector(".navbar");
+const progressBar = document.querySelector(".progress-bar");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // Nav shrink
+  nav.classList.toggle("scrolled", scrollY > 50);
+
+  // Scroll progress
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollY / docHeight) * 100;
+  progressBar.style.width = progress + "%";
+});
+</script>
+
 </body>
 </html>
