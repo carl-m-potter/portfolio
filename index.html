@@ -8,8 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
-  <nav class="navbar">
+
+<!-- Progress bar -->
+<div class="progress-bar"></div>
+
+<!-- NAV -->
+<nav class="navbar">
   <div class="nav-content">
     <div class="nav-brand">
       <img src="/portfolio/images/CP_main_colourless.png" alt="Carl Potter logo">
@@ -25,25 +31,30 @@
     </div>
   </div>
 </nav>
-  <header>
-  <header class="site-header">
-    <div class="header-text">
-<h1>Designing user experiences that drive real business impact</h1>
-<p>UX & Customer Experience Specialist</p>
+<!-- HERO -->
+<header class="site-header">
+  <div class="header-text">
+    <h1>Designing user experiences that drive real business impact</h1>
+    <p>UX & Customer Experience Specialist</p>
   </div>
-  </header>
-  <main>
-    <section>
-      <h3>Portfolio Highlights</h3>
-      <ul>
-        <li>CSAT improvement from 66% → 78%</li>
-        <li>Reduced translation spend from £965k → £125k</li>
-        <li>Improved support journeys for 43 EMEA countries</li>
-      </ul>
- </section>
+</header>
+
+<!-- MAIN -->
+<main>
+
+<section>
+  <h3>Portfolio Highlights</h3>
+  <ul>
+    <li>CSAT improvement from 66% → 78%</li>
+    <li>Reduced translation spend from £965k → £125k</li>
+    <li>Improved support journeys for 43 EMEA countries</li>
+  </ul>
+</section>
+
 <section id="case-studies" class="case-studies">
   <h2>Featured Case Studies</h2>
   <div class="cards-container">
+
     <div class="card">
       <img src="images/setup-thumbnail.png" alt="Setup Case Study">
       <h3>Setup</h3>
@@ -57,13 +68,15 @@
       <p>Explore how I designed, executed, and analysed user surveys to generate actionable insights.</p>
       <a href="case-studies/survey.html" class="button">Read More</a>
     </div>
-    
-    <!-- Add more cards as needed -->
+
   </div>
 </section>
-  </main>
-  <footer id="contact">
-    <h2>Contact</h2>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <h2>Contact</h2>
   <p>Get in touch</p>
 
   <div class="contact-buttons">
@@ -71,13 +84,19 @@
     <a href="https://linkedin.com/in/carl-potter-/" target="_blank" class="button">LinkedIn</a>
   </div>
 </footer>
-    <script id="nav-active">
+
+<!-- JS -->
+<script>
 const sections = document.querySelectorAll("section, footer");
 const navLinks = document.querySelectorAll(".nav-links a");
+const nav = document.querySelector(".navbar");
+const progressBar = document.querySelector(".progress-bar");
 
 window.addEventListener("scroll", () => {
-  let current = "";
+  const scrollY = window.scrollY;
 
+  // Active section highlighting
+  let current = "";
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 100;
     if (scrollY >= sectionTop) {
@@ -91,7 +110,16 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
     }
   });
+
+  // Nav shrink
+  nav.classList.toggle("scrolled", scrollY > 50);
+
+  // Scroll progress
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollY / docHeight) * 100;
+  progressBar.style.width = progress + "%";
 });
 </script>
+
 </body>
 </html>
