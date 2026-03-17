@@ -474,3 +474,14 @@ html {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
 }
+
+/* Full-width card with icon for "View All Case Studies" */
+.card-fullwidth .icon-container {
+  margin-bottom: 1rem;
+  color: #1073c6; /* matches your logo blue */
+}
+
+.card-fullwidth .icon-container i {
+  display: block;
+  margin: 0 auto;
+}
