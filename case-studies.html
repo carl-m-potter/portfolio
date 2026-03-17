@@ -149,6 +149,50 @@ window.addEventListener("scroll", () => {
   const progress = (scrollY / docHeight) * 100;
   progressBar.style.width = progress + "%";
 });
+
+  // Count-up animation for metrics
+const metrics = document.querySelectorAll('.metric-value');
+
+const animateMetrics = () => {
+  metrics.forEach(metric => {
+    const target = +metric.getAttribute('data-target');
+    const duration = 2000; // animation duration in ms
+    let start = 0;
+    const increment = target / (duration / 20);
+
+    const updateCount = () => {
+      start += increment;
+      if (start < target) {
+        metric.textContent = metric.getAttribute('data-target').includes("k")
+          ? '£' + Math.floor(start / 1000) + 'k'
+          : Math.floor(start);
+        requestAnimationFrame(updateCount);
+      } else {
+        // Final value
+        if (metric.getAttribute('data-target') >= 1000) {
+          metric.textContent = '£' + target / 1000 + 'k';
+        } else if (metric.getAttribute('data-target').includes("%") || metric.textContent.includes("+")) {
+          metric.textContent = '+' + target + '%';
+        } else {
+          metric.textContent = target;
+        }
+      }
+    };
+    updateCount();
+  });
+};
+
+// Trigger animation when metrics section is in viewport
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateMetrics();
+      observer.disconnect(); // only run once
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector('.case-intro-metrics'));
 </script>
 
 </body>
