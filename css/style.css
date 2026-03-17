@@ -264,7 +264,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
+  justify-content: flex-start; /* or center if you want cards to float in middle */
 }
 
 /* Individual cards */
