@@ -317,3 +317,11 @@ footer {
 .nav-links a:hover {
   color: #f3b734;
 }
+
+section {
+  scroll-margin-top: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
