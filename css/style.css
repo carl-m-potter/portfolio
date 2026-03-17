@@ -335,3 +335,43 @@ section {
 html {
   scroll-behavior: smooth;
 }
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.4rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: #1073c6;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #f3b734;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: #f3b734;
+  width: 0%;
+  z-index: 2000;
+}
