@@ -432,3 +432,45 @@ html {
 .card-fullwidth .button {
   align-self: center; /* center the button */
 }
+
+/* Full-width card for "View All Case Studies" - enhanced style */
+.card-fullwidth {
+  width: 100%;
+  max-width: 900px;  /* matches main content */
+  text-align: center;
+  margin-top: 2rem;
+  flex-direction: column;
+  background-color: #f3f3f3; /* subtle light grey to stand out */
+  border: 2px dashed #1073c6; /* subtle accent from logo */
+  box-shadow: 0 6px 18px rgba(16, 115, 198, 0.15); /* slightly stronger shadow */
+  padding: 2rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-fullwidth:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(16, 115, 198, 0.2);
+}
+
+.card-fullwidth img {
+  margin: 0 auto 1rem auto;
+  max-width: 150px;
+}
+
+.card-fullwidth h3 {
+  font-size: 1.5rem;
+  color: #1073c6;
+  margin-bottom: 0.5rem;
+}
+
+.card-fullwidth p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.card-fullwidth .button {
+  align-self: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
