@@ -510,3 +510,48 @@ html {
   text-align: left;
   max-width: 800px;
 }
+
+/* Case Study Intro Metrics Row */
+.case-intro-metrics {
+  max-width: 900px;
+  margin: 1.5rem auto 3rem auto;
+  padding: 1rem;
+}
+
+.metrics-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.metric {
+  flex: 1 1 200px; /* grows to fill space, min 200px */
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 2px 6px rgba(16, 115, 198, 0.1);
+}
+
+.metric h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #1073c6; /* your primary blue */
+  margin-bottom: 0.25rem;
+}
+
+.metric p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metrics-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
