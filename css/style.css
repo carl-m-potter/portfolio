@@ -252,14 +252,6 @@ footer {
   text-align: left; /* Align header left like other sections */
 }
 
-.case-studies h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #000; /* black heading */
-   text-align: left; /* Align header left like other sections */
-}
-
 /* Cards container */
 .cards-container {
   display: flex;
