@@ -485,3 +485,28 @@ html {
   display: block;
   margin: 0 auto;
 }
+
+.case-intro {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(16, 115, 198, 0.1);
+}
+
+.case-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 1rem;
+  text-align: left; /* matches About/Portfolio Highlights alignment */
+}
+
+.case-intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 800px;
+}
