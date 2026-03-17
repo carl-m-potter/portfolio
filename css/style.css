@@ -18,40 +18,31 @@ body {
 .site-header {
   display: flex;
   align-items: center;
-  gap: 1rem; /* space between logo and text */
-  background-color: #ffffff;
-  padding: 2rem 1rem;
+  gap: 1rem;
   justify-content: center;
+  background-color: #ffffff; /* or #f0f4f8 for more contrast */
+  padding: 2rem 1rem;
   border-bottom: 2px solid #0077cc;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap;
 }
 
 .logo {
-  width: 60px; /* adjust as needed */
+  width: 70px;
   height: auto;
 }
 
-header h1 {
+.header-text h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin: 0;
 }
 
-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  color: #555;
-  margin-top: 0.5rem;
-}
-
-header p {
-  max-width: 700px;
-  margin: 1rem auto 0 auto;
+.header-text p {
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  color: #444;
-  text-align: center;
+  color: #0077cc; /* subtle brand accent */
+  margin: 0.2rem 0 0 0;
 }
-
 /* ==========================
    Navigation
 ========================== */
