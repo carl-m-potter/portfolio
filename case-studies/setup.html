@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Setup | Carl Potter Portfolio</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
+
+<!-- Progress bar -->
+<div class="progress-bar"></div>
+
+<!-- NAV -->
+<nav class="navbar">
   <div class="nav-content">
     <div class="nav-brand">
       <img src="/portfolio/images/CP_main_colourless.png" alt="Carl Potter logo">
@@ -15,37 +23,70 @@
 
     <div class="nav-links">
       <a href="/portfolio/index.html">Home</a>
-      <a href="#cases">Case Studies</a>
+      <a href="/portfolio/about.html">About</a>
+      <a href="/portfolio/index.html#case-studies">Case Studies</a>  
+      <a href="/portfolio/skills.html">Skills</a>
       <a href="/portfolio/index.html#contact">Contact</a>
     </div>
   </div>
 </nav>
-  <header class="site-header">
-    <img src="../images/CP_main_colourless.png" alt="Carl Potter logo" class="logo">
-    <div class="header-text">
-      <h1>Carl Potter</h1>
-      <p>UX & Customer Experience Specialist</p>
-    </div>
-  </header>
 
-  <main>
-    <section>
-      <h2>Setup</h2>
-      <p>This case study details the project setup phase: defining goals, mapping workflows, and preparing tools.</p>
+<!-- HERO -->
+<header class="site-header">
+  <div class="header-text">
+    <h1>Setup</h1>
+    <p class="role">UX & Customer Experience Specialist</p>
+    <p class="tagline">Streamlined project setup across 43 EMEA countries, reducing prep errors and accelerating launch by 30%.</p>
+  </div>
+</header>
 
-      <h3>Goals</h3>
-      <p>Explain what the project aimed to achieve, the problems you identified, and why this setup was crucial.</p>
+<main>
+  <!-- Challenge -->
+  <section>
+    <h2>Challenge</h2>
+    <p>The project setup across 43 EMEA countries was inconsistent, causing delayed launches and errors in workflows. Teams struggled with misaligned goals and unclear processes.</p>
+  </section>
 
-      <h3>Process</h3>
-      <p>Describe your step-by-step process, including any frameworks, templates, or tools used.</p>
+  <!-- Approach -->
+  <section>
+    <h2>Approach</h2>
+    <p>I standardised goals, mapped workflows, and prepared tools to reduce complexity and improve alignment across teams. I created clear templates, checklists, and a shared resource library to support consistent setup.</p>
+  </section>
 
-      <h3>Results</h3>
-      <p>Summarize the outcomes or insights gained from the setup phase.</p>
-    </section>
-  </main>
+  <!-- Impact -->
+  <section>
+    <h2>Impact</h2>
+    <p>Launch prep time decreased by 30%, errors were reduced, and teams reported clearer workflows for ongoing projects. The standardised approach improved collaboration across multiple countries and departments.</p>
+  </section>
+</main>
 
-  <footer>
-    &copy; 2026 Carl Potter. All rights reserved.
-  </footer>
+<!-- FOOTER -->
+<footer id="contact">
+  <h2>Contact</h2>
+  <p>Get in touch</p>
+  <div class="contact-buttons">
+    <a href="mailto:cpotter514@gmail.com" class="button">Email Me</a>
+    <a href="https://linkedin.com/in/carl-potter-/" target="_blank" class="button">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- JS -->
+<script>
+const nav = document.querySelector(".navbar");
+const progressBar = document.querySelector(".progress-bar");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // Nav shrink
+  nav.classList.toggle("scrolled", scrollY > 50);
+
+  // Scroll progress
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollY / docHeight) * 100;
+  progressBar.style.width = progress + "%";
+});
+</script>
+
 </body>
 </html>
