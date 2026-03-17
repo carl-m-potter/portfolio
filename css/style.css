@@ -1,8 +1,6 @@
 /* ==========================
    Global Styles
 ========================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
-
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
@@ -12,6 +10,33 @@ body {
   padding: 0;
 }
 
+/* ==========================
+   Typography System
+========================== */
+
+/* All headings match hero */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #000;
+  margin-top: 0;
+}
+
+/* Body text */
+p, li, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  letter-spacing: 0.3px;
+}
+
+h3 {
+  letter-spacing: 0.2px;
+}
 /* ==========================
    Header
 ========================== */
@@ -117,9 +142,13 @@ section {
 
 /* Section Headings */
 section h2 {
-  color: #000000; /* black headings */
   font-size: 1.8rem;
   margin-bottom: 1rem;
+}
+
+section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Lists */
@@ -262,7 +291,6 @@ footer {
 }
 
 .card h3 {
-  font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   margin: 0.5rem 0;
   color: #000;
@@ -356,6 +384,7 @@ html {
 .navbar.scrolled {
   padding: 0.4rem 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
 
 .nav-links a {
   position: relative;
