@@ -3,34 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Carl Potter</title>
+  <title>[Page Title] | Carl Potter</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Carl Potter</h1>
-    <h2>About Me</h2>
-    <nav>
-      <a href="index.html">Home</a>
-           <a href="about.html">About</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="skills.html">Skills</a>
-          </nav>
-  </header>
-  <main>
-    <section>
-      <h2>My Approach to UX & CX</h2>
-      <p>I approach user experience with empathy and evidence. By combining behavioural data, surveys, and user journey analysis, I identify friction points and design actionable solutions. Collaboration with product and engineering teams ensures improvements are feasible and impactful.</p>
-      <ul>
-        <li><strong>Empathy:</strong> Understand the user’s perspective to drive meaningful change.</li>
-        <li><strong>Data-informed:</strong> Analyse quantitative and qualitative sources to uncover friction.</li>
-        <li><strong>Insight-to-action:</strong> Recommendations tied to measurable outcomes.</li>
-        <li><strong>Collaboration:</strong> Work closely with cross-functional teams to implement improvements.</li>
-      </ul>
-      </section>
-  </main>
-  <footer>
-    <p>© 2026 Carl Potter | Email: <a href="mailto:cpotter514@gmail.com">cpotter514@gmail.com</a> | <a href="https://www.linkedin.com/in/carl-potter-/">LinkedIn</a></p>
-  </footer>
+
+<!-- Progress bar -->
+<div class="progress-bar"></div>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-content">
+    <div class="nav-brand">
+      <img src="/portfolio/images/CP_main_colourless.png" alt="Carl Potter logo">
+      <span>Carl Potter</span>
+    </div>
+    <div class="nav-links">
+      <a href="/portfolio/index.html">Home</a>
+      <a href="/portfolio/about.html">About</a>
+      <a href="/portfolio/index.html#case-studies">Case Studies</a>  
+      <a href="/portfolio/skills.html">Skills</a>
+      <a href="/portfolio/index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+  <section id="about">
+    <h1>About Me</h1>
+    <p>I’m Carl Potter, a UX & Customer Experience Specialist with a track record of transforming complex support journeys into measurable business impact.  
+       I’ve improved CSAT from 66% → 78%, reduced translation spend from £965k → £125k, and optimised processes across 43 EMEA countries.</p>
+    <p>I specialise in research-driven design, service optimisation, and data-informed decision-making, helping companies save money while delivering better experiences for their customers.</p>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <h2>Contact</h2>
+  <p>Get in touch</p>
+  <div class="contact-buttons">
+    <a href="mailto:cpotter514@gmail.com" class="button">Email Me</a>
+    <a href="https://linkedin.com/in/carl-potter-/" target="_blank" class="button">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- JS -->
+<script>
+const sections = document.querySelectorAll("section, footer");
+const navLinks = document.querySelectorAll(".nav-links a");
+const nav = document.querySelector(".navbar");
+const progressBar = document.querySelector(".progress-bar");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // Active section highlighting
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+
+  // Nav shrink
+  nav.classList.toggle("scrolled", scrollY > 50);
+
+  // Scroll progress
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollY / docHeight) * 100;
+  progressBar.style.width = progress + "%";
+});
+</script>
+
 </body>
 </html>
