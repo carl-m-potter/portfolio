@@ -64,6 +64,19 @@ body {
   background-color: #f3b734;
   margin-top: 0.4rem;
 }
+.header-text .role {
+  font-size: 1.1rem;
+  color: #1073c6;
+  margin: 0.3rem 0;
+  font-weight: 600;
+}
+
+.header-text .tagline {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.8rem;
+  max-width: 600px;
+}
 
 /* ==========================
    Navigation
