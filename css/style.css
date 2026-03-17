@@ -410,3 +410,25 @@ html {
   width: 0%;
   z-index: 2000;
 }
+
+/* Full-width card for "View All Case Studies" */
+.card-fullwidth {
+  width: 100%;
+  max-width: 900px; /* matches the main content width */
+  text-align: center;
+  margin-top: 2rem; /* space from the previous cards */
+  flex-direction: column; /* ensure content stacks nicely */
+}
+
+.card-fullwidth img {
+  margin: 0 auto 1rem auto; /* center the image */
+}
+
+.card-fullwidth h3,
+.card-fullwidth p {
+  text-align: center;
+}
+
+.card-fullwidth .button {
+  align-self: center; /* center the button */
+}
