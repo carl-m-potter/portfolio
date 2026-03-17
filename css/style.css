@@ -18,22 +18,19 @@ body {
 .site-header {
   display: flex;
   align-items: center;
+  justify-content: center; /* keeps whole block centered */
   gap: 1rem;
-  justify-content: center;
-  background-color: #ffffff;
-  padding: 4rem 1rem; /* keeps hero section big */
+  padding: 4rem 1rem;
   border-bottom: 2px solid #1073c6;
   flex-wrap: wrap;
-  position: relative;
+  background-color: #ffffff;
 }
 
 .logo {
-  width: 100px;
+  width: 70px;
   height: auto;
-  position: absolute;
-  left: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  position: static; /* remove absolute positioning */
+  transform: none;
 }
 
 .header-text {
