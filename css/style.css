@@ -574,3 +574,35 @@ html {
   max-width: 800px;
   width: 100%;
 }
+
+.visuals-section {
+  margin-top: 3rem;
+}
+
+.visuals-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .visuals-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
