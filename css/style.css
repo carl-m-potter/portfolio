@@ -606,3 +606,10 @@ html {
     align-items: start;
   }
 }
+
+.caption {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
