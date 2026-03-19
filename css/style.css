@@ -569,3 +569,8 @@ html {
   --accent-amber: #f3b734;
    color: var(--primary-blue);
 }
+
+.case-image img {
+  max-width: 800px;
+  width: 100%;
+}
