@@ -274,19 +274,29 @@ footer {
   transition: box-shadow 0.3s ease;
 }
 .card-cta {
-  border: 2px solid #1abc9c;
-  background: rgba(26, 188, 156, 0.05);
+  border: 2px solid #1073c6;
+  background: rgba(16, 115, 198, 0.06);
 }
-.card-cta .impact {
-  color: #1abc9c;
+
+.card .impact {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1073c6; /* your primary blue */
+  margin-bottom: 8px;
 }
+
 .card-cta:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(16, 115, 198, 0.2);
+  background: rgba(16, 115, 198, 0.1);
 }
 
 .card:hover {
   box-shadow: 0 6px 15px rgba(16, 115, 198, 0.2);
+}
+
+.card-cta .impact {
+  color: #1073c6;
 }
 
 .card img {
@@ -455,15 +465,10 @@ html {
 /* Full-width card for "View All Case Studies" - enhanced style */
 .card-fullwidth {
   width: 100%;
-  max-width: 900px;  /* matches main content */
+  max-width: 900px;
   text-align: center;
   margin-top: 2rem;
   flex-direction: column;
-  background-color: #f3f3f3; /* subtle light grey to stand out */
-  border: 2px dashed #1073c6; /* subtle accent from logo */
-  box-shadow: 0 6px 18px rgba(16, 115, 198, 0.15); /* slightly stronger shadow */
-  padding: 2rem 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-fullwidth:hover {
@@ -494,16 +499,6 @@ html {
   font-size: 1rem;
 }
 
-/* Full-width card with icon for "View All Case Studies" */
-.card-fullwidth .icon-container {
-  margin-bottom: 1rem;
-  color: #1073c6; /* matches your logo blue */
-}
-
-.card-fullwidth .icon-container i {
-  display: block;
-  margin: 0 auto;
-}
 
 .case-intro {
   background-color: #ffffff;
@@ -573,4 +568,10 @@ html {
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+:root {
+  --primary-blue: #1073c6;
+  --accent-amber: #f3b734;
+   color: var(--primary-blue);
 }
