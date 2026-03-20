@@ -613,3 +613,40 @@ html {
   line-height: 1.4;
   margin: 0;
 }
+
+/* Before / After Image Grid */
+.image-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(16, 115, 198, 0.15);
+}
+
+/* Diagram / Single Image */
+.case-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.case-image img {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(16, 115, 198, 0.15);
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
