@@ -474,3 +474,15 @@ footer {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(16, 115, 198, 0.18);
 }
+.card-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1073c6;
+  background-color: rgba(16, 115, 198, 0.08);
+  padding: 4px 8px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
