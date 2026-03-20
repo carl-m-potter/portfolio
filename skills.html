@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills | Carl Potter</title>
+
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body>
 
-<!-- Progress bar -->
-<div class="progress-bar"></div>
+<body>
 
 <!-- NAV -->
 <nav class="navbar">
@@ -30,19 +29,86 @@
   </div>
 </nav>
 
-<!-- MAIN CONTENT -->
 <main>
-  <section id="skills">
-    <h1>Skills</h1>
-    <ul>
-      <li>User Experience Design (UXD)</li>
-      <li>Customer Experience Optimization (CX)</li>
-      <li>User Research & Surveys</li>
-      <li>Service & Process Design</li>
-      <li>Data Analysis & Insights</li>
-      <li>Prototyping & Wireframing</li>
-    </ul>
+
+  <!-- INTRO -->
+  <section class="skills-intro">
+    <h2>Skills & Capabilities</h2>
+    <p>
+      My experience spans UX, customer experience, research, and service design, with a focus on improving complex systems at scale. I combine user insight, data, and cross-functional collaboration to deliver measurable improvements in usability, efficiency, and cost.
+    </p>
   </section>
+
+  <!-- SKILL GROUPS -->
+  <section class="skills-grid">
+
+    <div class="skill-card">
+      <h3>UX & Customer Experience Strategy</h3>
+      <p>
+        End-to-end journey design, support experience optimisation, and scalable CX improvements across multi-market environments.
+      </p>
+      <ul>
+        <li>Journey mapping & problem identification</li>
+        <li>Experience optimisation across touchpoints</li>
+        <li>Designing for large-scale support ecosystems</li>
+        <li>Prioritising improvements based on impact</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>User Research & Insights</h3>
+      <p>
+        Combining qualitative and quantitative research to understand user behaviour and inform product and experience decisions.
+      </p>
+      <ul>
+        <li>Survey design and optimisation</li>
+        <li>CSAT / feedback analysis</li>
+        <li>Behavioural data interpretation</li>
+        <li>Translating insights into actions</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Service & Process Design</h3>
+      <p>
+        Designing and improving operational workflows to reduce friction, improve efficiency, and support scalable delivery across teams and markets.
+      </p>
+      <ul>
+        <li>Workflow and process optimisation</li>
+        <li>Cross-functional collaboration</li>
+        <li>Operational efficiency improvements</li>
+        <li>Scalable content and publishing systems</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Data-Driven Decision Making</h3>
+      <p>
+        Using data and feedback to identify issues, prioritise opportunities, and measure the impact of UX and process changes.
+      </p>
+      <ul>
+        <li>Quantitative analysis of user behaviour</li>
+        <li>Performance tracking and impact measurement</li>
+        <li>Identifying trends and root causes</li>
+        <li>Evidence-based prioritisation</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Prototyping & Communication</h3>
+      <p>
+        Creating wireframes and prototypes to communicate ideas clearly and align stakeholders around solutions.
+      </p>
+      <ul>
+        <li>Wireframing and interaction design</li>
+        <li>Rapid prototyping</li>
+        <li>Stakeholder presentations</li>
+        <li>Translating concepts into delivery-ready solutions</li>
+      </ul>
+    </div>
+
+  </section>
+
 </main>
 
 <!-- FOOTER -->
@@ -54,42 +120,6 @@
     <a href="https://linkedin.com/in/carl-potter-/" target="_blank" class="button">LinkedIn</a>
   </div>
 </footer>
-
-<!-- JS -->
-<script>
-const sections = document.querySelectorAll("section, footer");
-const navLinks = document.querySelectorAll(".nav-links a");
-const nav = document.querySelector(".navbar");
-const progressBar = document.querySelector(".progress-bar");
-
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-
-  // Active section highlighting
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
-    }
-  });
-
-  // Nav shrink
-  nav.classList.toggle("scrolled", scrollY > 50);
-
-  // Scroll progress
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const progress = (scrollY / docHeight) * 100;
-  progressBar.style.width = progress + "%";
-});
-</script>
 
 </body>
 </html>
