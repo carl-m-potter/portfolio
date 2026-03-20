@@ -174,19 +174,24 @@ footer {
 ========================== */
 .button {
   display: inline-block;
-  background-color: #f3b734;
-  color: #000;
+  background-color: #f3b734; /* gold */
+  color: #000; /* black text */
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 700;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+/* Hover state */
 .button:hover {
-  background-color: #1073c6;
-  color: #fff;
+  background-color: #1073c6; /* blue */
+  color: #fff; /* white text */
   transform: translateY(-2px);
+}
+
+.card .button {
+  margin-top: auto;
 }
 
 .contact-buttons {
@@ -355,17 +360,6 @@ footer {
   color: #444;
 }
 
-/* Button */
-.card .button {
-  margin-top: auto;
-  text-decoration: none;
-  font-weight: 600;
-  color: #1073c6;
-}
-
-.card .button:hover {
-  text-decoration: underline;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
