@@ -519,3 +519,31 @@ footer {
 .skill-card li {
   margin-bottom: 6px;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 1rem;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+.case-image {
+  margin-top: 1rem;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
