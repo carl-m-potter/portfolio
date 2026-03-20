@@ -132,12 +132,16 @@ const progressBar = document.querySelector(".progress-bar");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
+  const viewportMiddle = scrollY + window.innerHeight / 2;
 
-  // Active section highlighting
   let current = "";
+
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (scrollY >= sectionTop) {
+    const rect = section.getBoundingClientRect();
+    const sectionTop = scrollY + rect.top;
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    if (viewportMiddle >= sectionTop && viewportMiddle < sectionBottom) {
       current = section.getAttribute("id");
     }
   });
@@ -149,13 +153,12 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Nav shrink
   nav.classList.toggle("scrolled", scrollY > 50);
 
-  // Scroll progress
   const docHeight = document.body.scrollHeight - window.innerHeight;
   const progress = (scrollY / docHeight) * 100;
   progressBar.style.width = progress + "%";
+});
 });
 </script>
 
