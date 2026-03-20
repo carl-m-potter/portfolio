@@ -572,3 +572,28 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 1rem;
+}
+
+.media-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}
