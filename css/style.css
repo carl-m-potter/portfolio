@@ -427,3 +427,50 @@ footer {
   --primary-blue: #1073c6;
   --accent-amber: #f3b734;
 }
+
+.card.featured {
+  position: relative;
+  padding: 32px;
+  background: linear-gradient(135deg, #eef6ff, #ffffff);
+  border: 2px solid #1073c6;
+}
+
+/* Featured badge */
+.card.featured::before {
+  content: "Featured";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #1073c6;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+}
+
+/* Make featured title slightly stronger */
+.card.featured h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Emphasise impact more */
+.card.featured .impact {
+  font-size: 1.1rem;
+  color: #1073c6;
+  font-weight: 700;
+}
+
+/* Slightly increase spacing inside featured card */
+.card.featured p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Optional: make featured card feel more prominent */
+.card.featured:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(16, 115, 198, 0.18);
+}
